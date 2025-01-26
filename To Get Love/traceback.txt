@@ -1,0 +1,53 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 298, in script
+    "Miko" "Saat cahaya bintang melewati atmosfer"
+  File "renpy/common/00library.rpy", line 321, in say
+    who(what, interact=interact, *args, **kwargs)
+OSError: Couldn't find file 'download (57).wav'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 298, in script
+    "Miko" "Saat cahaya bintang melewati atmosfer"
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\exports.py", line 1492, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 321, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\display\core.py", line 3026, in interact_core
+    renpy.audio.audio.periodic()
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1199, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1177, in periodic_thread_main
+    periodic_pass()
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1119, in periodic_pass
+    c.periodic()
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\audio\audio.py", line 528, in periodic
+    topf = load(filename)
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "D:\Downloads\renpy-8.2.3-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'download (57).wav'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.2.3.24061702
+To Get Love 1.0
+Tue Jun 25 09:35:19 2024
